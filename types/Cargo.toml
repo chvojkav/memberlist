@@ -28,9 +28,10 @@ serde = [
   "ipnet/serde",
   "bytes/serde",
   "nodecraft/serde",
-  "indexmap?/serde"
+  "indexmap?/serde",
 ]
 rkyv = ["dep:rkyv", "smallvec-wrapper/rkyv32", "nodecraft/rkyv"]
+docs = []
 
 [dependencies]
 bytes.workspace = true

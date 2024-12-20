@@ -22,7 +22,12 @@ compression = ["rayon", "weezl"]
 encryption = ["memberlist-core/encryption"]
 quinn = ["agnostic/quinn", "dep:quinn", "rustls", "agnostic/net"]
 s2n = ["s2n-quic", "s2n-quic-transport", "futures/bilock", "futures/unstable"]
-serde = ["memberlist-core/serde", "dep:serde", "humantime-serde", "indexmap/serde"]
+serde = [
+    "memberlist-core/serde",
+    "dep:serde",
+    "humantime-serde",
+    "indexmap/serde",
+]
 metrics = ["memberlist-core/metrics", "dep:metrics"]
 
 tokio = ["agnostic/tokio"]
@@ -76,8 +81,13 @@ humantime-serde = { workspace = true, optional = true }
 metrics = { workspace = true, optional = true }
 
 # quinn
-quinn = { version = "0.10.2", default-features = false, optional = true, features = ["tls-rustls", "futures-io"] }
-rustls = { version = "0.21.9", default-features = false, optional = true, features = ["dangerous_configuration"] }
+quinn = { version = "0.10.2", default-features = false, optional = true, features = [
+    "tls-rustls",
+    "futures-io",
+] }
+rustls = { version = "0.21.9", default-features = false, optional = true, features = [
+    "dangerous_configuration",
+] }
 
 # test
 rcgen = { version = "0.12", optional = true }
