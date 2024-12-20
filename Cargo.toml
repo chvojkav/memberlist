@@ -39,7 +39,7 @@ futures = "0.3"
 indexmap = "2"
 local-ip-address = "0.6"
 metrics = "0.22"
-nodecraft = { version = "0.3", path = "../nodecraft", features = [
+nodecraft = { git = "https://github.com/chvojkav/nodecraft.git", branch = "buildable-ruserf", features = [
   "transformable",
   "async",
   "resolver",
@@ -51,12 +51,12 @@ scopeguard = "1"
 serde = { version = "1", features = ["derive", "rc"] }
 humantime-serde = "1"
 smallvec = "1"
-smallvec-wrapper = { version = "0.1", path = "../smallvec-wrapper", features = [
+smallvec-wrapper = { git = "https://github.com/chvojkav/smallvec-wrapper.git", branch = "buildable-ruserf", features = [
   "const_new",
   "either",
 ] }
 smol_str = "0.2"
-transformable = { version = "0.1.6", path = "../transformable", features = [
+transformable = { git = "https://github.com/chvojkav/transformable.git", branch = "buildable-ruserf", features = [
   "smol_str",
   "bytes",
 ] }
